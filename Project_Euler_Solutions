@@ -146,3 +146,58 @@ for i in range(len(b)-12):
 p
 
 
+
+    
+# =============================================================================
+# Q9.A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+# 
+# a2 + b2 = c2
+# For example, 32 + 42 = 9 + 16 = 25 = 52.
+# 
+# There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+# Find the product abc.
+#     
+# =============================================================================
+
+for i in range(1,1000):
+    for j in range(i+1,1000):
+        for k in range(j+1,1000):
+            if (i*i+j*j==k*k and i+j+k==1000):
+                r=i*j*k
+                print(r)
+                break
+        if (i*i+j*j==k*k and i+j+k==1000):
+            break
+    if (i*i+j*j==k*k and i+j+k==1000):
+        break
+    
+# =============================================================================
+# Q10.Find the sum of all the primes below two million. 
+#     
+# =============================================================================
+import math
+s=5
+for i in range(4,2000000):
+    for j in range(2,int(math.sqrt(i))+1):
+        if(i%j==0):
+            break
+        elif(j==int(math.sqrt(i))):
+            s=s+i
+s       
+
+
+
+
+
+
+
+
+ # =============================================================================
+# Q48.Find the last ten digits of the series, 11 + 22 + 33 + ... + 1000^1000.
+# 
+# =============================================================================
+s=0
+for i in range(1,1001):
+    s=s+i**i
+s%10**10    
+    
